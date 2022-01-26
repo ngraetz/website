@@ -1,0 +1,37 @@
+---
+authors:
+- admin
+categories:
+date: "2016-04-20T00:00:00Z"
+draft: false
+featured: false
+image:
+  caption: 
+  focal_point: ""
+  placement: 2
+  preview_only: false
+lastmod: "2019-04-17T00:00:00Z"
+projects: []
+subtitle: 'Applications for structural racism and effects of place.'
+summary: Applications for structural racism and effects of place.
+tags:
+title: 'Causal mediation analysis'
+---
+
+**Publications**
+
+Graetz, N., Boen, C., Esposito, M.H. (2022). Structural racism and quantitative causal inference: A life-course mediation framework for decomposing racial health disparities. _Journal of Health and Social Behavior_ (online first).
+
+**Under review**
+
+Graetz, N. & Esposito, M. (2022). Historical redlining and contemporary racial disparities in neighborhood life expectancy. _Revise and resubmit_. Working paper: https://osf.io/preprints/socarxiv/q9gbx/.
+
+Graetz, N. (2022). Historical mechanisms connecting home values over three generations to contemporary Black-white disparities in health and wealth. 
+
+Graetz, N. (2022). Mechanisms connecting neighborhood disadvantage to child development: A life-course mediation analysis. 
+
+Graetz, N. (2022). Mechanisms maintaining Black-white trends and disparities in life-course wealth accumulation.
+
+**In progress**
+
+Graetz, N. & Song, X. (2021). G-computation for decomposing population disparities: Three-way effect decomposition with a new R package multmed. 

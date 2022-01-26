@@ -1,0 +1,450 @@
+rm(list=ls())
+library(data.table)
+library(survey)
+library(mice)
+library(boot)
+library(MASS)
+library(snow)
+library(miceadds)
+library(mitools)
+library(ggplot2)
+library(parallel)
+library(flextable)
+library(officer)
+library(dplyr)
+in_dir <- 'C:/Users/ncgra/Dropbox/Penn/repos/redlining'
+repo <- 'C:/Users/ncgra/Dropbox/Penn/repos/multmed_gcomp'
+source(paste0(repo,"/functions_Mar2020.R"))
+
+#########################################################################################################
+#########################################################################################################
+## (0) G-formula options
+#########################################################################################################
+#########################################################################################################
+
+figure_tag <- 'full_backward_sample_FINAL'
+results_dir <- paste0(in_dir,'/',figure_tag)
+dir.create(results_dir)
+
+## Custom clean names for plotting effects (ADD NAMES HERE IF ADDING NEW MEDIATORS) 
+clean_names <- data.table(effect=c("ATE","CDE",
+                                   "PNIE_holc_D","PAI_holc_D",
+                                   "PNIE_projects","PAI_projects",
+                                   "PNIE_school_ice","PAI_school_ice",
+                                   "PNIE_percent_black","PAI_percent_black",
+                                   "PNIE_blackworking","PAI_blackworking",
+                                   "PNIE_median_house_value","PAI_median_house_value",
+                                   "PNIE_essential_2015_2019","PAI_essential_2015_2019",
+                                   'PNIE_ice','PAI_ice'),
+                          effect_clean=c("ATE","CDE",
+                                         "HOLC D grade (PIE)","HOLC D grade (PAI)",
+                                         "UR projects (PIE)","UR projects (PAI)",
+                                         "School ICE (PIE)","School ICE (PAI)",
+                                         "Percent Black (PIE)","Percent Black (PAI)",
+                                         "Black WC (PIE)","Black WC (PAI)",
+                                         "Home values (PIE)","Home values (PAI)",
+                                         "Percent essential (PIE)","Percent essential (PAI)",
+                                         'Race/class ICE (PIE)','Race/class ICE (PAI)'))
+
+## G-formula setup parameters
+seq_med_type <- 'sequential_update_outcome'
+run_gcomp <- TRUE
+outcome_vars <- 'e0'
+interaction_vars <- 'blackwork'
+treatment_var <- 'blackwork'
+duration_vars=NULL
+ever_vars=NULL
+cumcount_vars=NULL
+dummy_vars <- NULL
+ordinal_vars <- NULL
+ordinal_levels <- NULL
+ordinal_refs <- NULL
+names(ordinal_levels) <- NULL
+names(ordinal_refs) <- NULL
+
+## Parameters for simulations.
+total_sim_count <- 200 ## Number of gformula simulations (via parametric bootstraps on fitted GLMS).
+mc_reps <- 50 ## Number of data replicates (to remove MC error in individual response prediction within simulations; only if you have binomial/multinomial mediators/outcomes).
+master_sim_dir <- 'C:/Users/ncgra/Documents/redlined/' ## Directory for saving lots of tiny intermediate results (these are batched out automatically, so will not take up a lot of memory).
+use_mean_betas <- F ## Set to TRUE if you only want quick point estimates of all effects (with total_sim_count==1) or set to FALSE for lots of simulations with parametric bootstraps to get standard errors on effects.
+use_np_boot <- F ## Set to TRUE if you want non-parametric bootstrap. This should be combined with use_mean_betas <- T. A parametric bootstrap would be use_mean_betas <- F & use_np_boot <- F.
+do_decomp <- T ## Set to TRUE to calculate isolated expected values necessary for effect decomposition via multmed_decomp() below, or just natural/intervention courses for total effects.
+decomp_type <- '4way' ## Effect decomposition type ('2way' for NDE, NDE or '4way' for CDE, PAIs, PIEs).
+parallelize <- T ## Whether to parallelize gformula simulations or run serially.
+windows <- TRUE ## OS if parallelizing (TRUE=Windows or FALSE=Linux).
+processors <- 6 ## How many parallel threads if parallelizing?
+seq_med_type <- 'sequential_update_outcome' ## 'standard','sequential_fixed_outcome','sequential_update_outcome'
+
+#########################################################################################################
+#########################################################################################################
+## (1) Load data/DAG and fit all GLMs 
+#########################################################################################################
+#########################################################################################################
+
+## Load data and path_cb (DAG).
+data <- readRDS(paste0(in_dir,'/clean_tract_data/med_data_confounders_update.RDS'))
+path_cb <- fread(paste0(in_dir, '/seq_dag.csv'))
+
+## Subset to Black working class vs. white professional class
+data[is.na(holc_D), holc_D := 0]
+data <- data[!is.na(median_house_value) & !is.na(ice) & !is.na(e0),]
+data[, ice := ice * (-1)]
+data[, median_house_value := log(median_house_value)]
+data[, median_house_value := scale(median_house_value)]
+data[, ice_percentile := cut(ice,
+                             breaks=unique(quantile(ice,probs=seq(0,1,0.01))),
+                             labels=1:(length(unique(quantile(ice,probs=seq(0,1,0.01))))-1), include.lowest = T)]
+data[, ice_percentile := as.numeric(as.character(ice_percentile))]
+data[ice_percentile>=95, blackwork := 1]
+data[ice_percentile<=5, blackwork := 0]
+data <- data[!is.na(blackwork)]
+data[, mean(e0), by='blackwork']
+## AVERAGE HOLD GRADE
+data[, holc_D := holc_average]
+data[is.na(holc_D), holc_D := 0]
+dim(data)
+data <- data[`Abridged life table flag`!=2,]
+
+## TRY DECOMPOSITION AS WE SEQUENTIALLY ADD DEPENDENT MEDIATORS.
+## THIS WAY WE CAN SEE HOW MUCH MEDIATORS MATTER IN TOTAL BEFORE MOVING THROUGH SUBSEQUENT MEDIATORS.
+## MAKE DAG CODEBOOKS MANUALLY AS WE GO, ASSUMING ALL MEDIATOR*TREATMENT AND CONFOUNDER*TREATMENT INTERACTIONS.
+mediators <- c('holc_D','projects','school_ice','median_house_value',outcome_vars)
+families <- c('gaussian','gaussian','gaussian','gaussian','gaussian') ## Options: gaussian, quasibinomial, syvolr
+all_tc_vars <- list(c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930'),
+                    c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930'),
+                    c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930'),
+                    c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930'),
+                    c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930'))
+all_tv_vars <- NULL
+#all_tc_vars <- list(c('g1_male'),c('g2_male'),c('g2_male'),c('g3_male'),c('g3_male'),c('g3_male'))
+#all_tv_vars <- list(c('g1_age'),c('g2_age'),c('g2_age'),c('g3_age'),c('g3_age'),c('g3_age'))
+
+dim(data)
+for(m in mediators) data <- data[!is.na(get(m)),]
+for(c in c('percentblack1930','foreignborn1930','unemployed1930','homevalue1930','blackowner1930','whiteowner1930')) data <- data[!is.na(get(c)),]
+dim(data)
+
+## Run either sequential mediation (updating target outcome) or full mediation (all mediators at once)
+if(grepl('sequential',seq_med_type)) med_iter <- 1:(length(mediators)-1)
+if(!grepl('sequential',seq_med_type)) med_iter <- (length(mediators)-1)
+for(m in med_iter) {
+  
+  message(m)
+  sim_dir <- paste0(master_sim_dir,m,'/')
+  dir.create(sim_dir)
+  
+  ## Build the mediator(s) model(s)
+  build_m_model <- function(i) {
+    path_cb <- data.table(age=1)
+    path_cb[, family := families[i]]
+    path_cb[, tc_vars := paste(paste0(treatment_var,'*',unlist(all_tc_vars[i])),collapse=',')]
+    if(is.null(all_tc_vars)) path_cb[, tc_vars := treatment_var]
+    path_cb[, tv_vars := paste(paste0(treatment_var,'*',unlist(all_tv_vars[i])),collapse=',')]
+    if(is.null(all_tv_vars)) path_cb[, tv_vars := treatment_var]
+    if(i!=1) path_cb[, tv_vars := paste0(tv_vars,',',paste(paste0(treatment_var,'*',mediators[1:i-1]),collapse=','))]
+    path_cb[, update_vars := mediators[i]]
+    return(path_cb)
+  }
+  path_cb_m <- rbindlist(lapply(1:m, build_m_model))
+  
+  ## Build the outcome model
+  build_y_model <- function(i, meds) {
+    path_cb <- data.table(age=1)
+    path_cb[, family := families[i]]
+    path_cb[, tc_vars := paste(paste0(treatment_var,'*',unlist(all_tc_vars[i])),collapse=',')]
+    if(is.null(all_tc_vars)) path_cb[, tc_vars := treatment_var]
+    path_cb[, tv_vars := paste(paste0(treatment_var,'*',unlist(all_tv_vars[i])),collapse=',')]
+    if(is.null(all_tv_vars)) path_cb[, tv_vars := treatment_var]
+    if(i!=1) path_cb[, tv_vars := paste0(tv_vars,',',paste(paste0(treatment_var,'*',meds),collapse=','))]
+    path_cb[, update_vars := mediators[i]]
+    return(path_cb)
+  }
+  if(seq_med_type %in% c('standard','sequential_fixed_outcome')) path_cb_y <- build_y_model(length(families), meds=path_cb_m[,update_vars])
+  if(seq_med_type=='sequential_update_outcome') path_cb_y <- build_y_model(m+1, meds=path_cb_m[,update_vars])
+  
+  ## Custom changes
+  #path_cb_y[, tv_vars := gsub('holc_D[*]essential_2015_2019','essential_2015_2019',tv_vars)]
+  
+  ## Combine to one DAG
+  path_cb <- rbind(path_cb_m,path_cb_y)
+  
+  ## Select outcome for this mediation
+  o <- path_cb[.N,update_vars]
+  
+  ## Build decomp paths
+  path_list <- as.list(path_cb_m[, update_vars])
+  names(path_list) <- path_cb_m[, update_vars]
+  outcome_list <- o
+  decomp_paths <- list(list(paths=path_list,outcomes=outcome_list))
+  names(decomp_paths) <- 'treatment_course'
+  control_course <- 'control_course'
+  
+  ## Build ordinal vars
+  # dummy_vars <- c('g2_edu_cat','g3_edu_cat')
+  # dummy_vars <- dummy_vars[dummy_vars %in% path_cb[,update_vars]]
+  # ordinal_vars <- c('g1_house_value_percentile','g2_house_value_percentile','g3_house_value_percentile')
+  # ordinal_levels <- list(c('0','1','2','3','4'),
+  #                        c('0','1','2','3','4'),
+  #                        c('0','1','2','3','4'))
+  # ordinal_refs <- c('0','0','0')
+  # names(ordinal_levels) <- ordinal_vars
+  # names(ordinal_refs) <- ordinal_vars
+  # ordinal_vars <- ordinal_vars[ordinal_vars %in% path_cb[,update_vars]]
+  # ordinal_levels <- ordinal_levels[ordinal_vars]
+  # ordinal_refs <- ordinal_refs[ordinal_vars]
+  # ordinal_vars <- NULL
+  # ordinal_refs <- NULL
+  # ordinal_levels <- NULL
+  
+  ## Fit all models.
+  data[, pweight_1 := 1] ## data must contain variables 'id' and 'pweight' (weights can just all be 1 if you want un-weighted estimates)
+  data[, id := GEOID]
+  inputs <- multmed_glms(path_cb, df=data)
+  for(obj in names(inputs)) assign(obj, inputs[[obj]])
+  
+  #########################################################################################################
+  #########################################################################################################
+  ## (2) Calculate g-formulas for mediation analyses
+  #########################################################################################################
+  #########################################################################################################
+  
+  ## Specify natural courses. Default would just be no changes to the data, but you could subset or something here if you wanted.
+  natural_courses <- list(
+    function(d) {
+      return(d) 
+    }
+  )
+  names(natural_courses) <- 'natural_course'
+  
+  ## Specify intervention rules and natural rules as a list of functions to apply to the data. 
+  intervention_rules <- list(
+    function(d,...) {
+      d[, blackwork := 0]
+      return(d)
+    },
+    function(d,...) {
+      d[, blackwork := 1]
+      return(d)
+    }
+  )
+  names(intervention_rules) <- c('control_course','treatment_course')
+  
+  ## Estimate g-formulas
+  if(run_gcomp) {
+    set.seed(12345)
+    multmed_gformula(data=data,
+                     tc_vars=all_tc_vars,
+                     models=models,
+                     sim_dir=sim_dir,
+                     natural_courses=natural_courses,
+                     intervention_rules=intervention_rules,
+                     path_cb=path_cb,
+                     treatment_var=treatment_var,
+                     control_course=control_course,
+                     total_sim_count = total_sim_count,
+                     mc_replicates = mc_reps,
+                     decomp_paths = decomp_paths,
+                     parallelize=parallelize,
+                     processors=processors,
+                     windows=windows,
+                     mean_betas = use_mean_betas,
+                     decomp = do_decomp,
+                     decomp_type = decomp_type,
+                     dummy_vars=dummy_vars,
+                     ordinal_levels=ordinal_levels,
+                     ordinal_vars=ordinal_vars,
+                     ordinal_refs=ordinal_refs,
+                     duration_vars=duration_vars,
+                     ever_vars=ever_vars,
+                     cumcount_vars=cumcount_vars)
+    
+    ## Post-process all g-formula results
+    lapply(names(intervention_rules), post_process_course, total_sims=total_sim_count, sim_dir=sim_dir, decomp_paths=decomp_paths)
+  }
+  
+  #########################################################################################################
+  #########################################################################################################
+  ## (3) Summarize results 
+  #########################################################################################################
+  #########################################################################################################
+  
+  ## Decomposed effect table
+  effect_table <- multmed_decomp(intervention_course = names(decomp_paths)[1],
+                                 compare_course = control_course,
+                                 decomp_paths = decomp_paths,
+                                 total_sims = total_sim_count,
+                                 sim_dir = sim_dir,
+                                 decomp_type = decomp_type,
+                                 outcome_var = o)
+  draw_table <- effect_table[[2]]
+  effect_table <- effect_table[[1]]
+  
+  ## Effect plot
+  saveRDS(effect_table, paste0(results_dir,'/',m,'_effects.RDS'))
+  png(paste0(results_dir,'/',m,'_',figure_tag,'_',o,'_',Sys.Date(),'.png'),height=11,width=11, units='in',res=600)
+  print(multmed_effect_plot(effect_table=effect_table,
+                            clean_names=clean_names))
+  dev.off()
+  
+  ## Effect table
+  effect_table <- multmed_decomp(intervention_course = names(decomp_paths)[1],
+                                 compare_course = control_course,
+                                 decomp_paths = decomp_paths,
+                                 total_sims = total_sim_count,
+                                 sim_dir = sim_dir,
+                                 decomp_type = decomp_type,
+                                 outcome_var = o)
+  draw_table <- effect_table[[2]]
+  effect_table <- effect_table[[1]]
+  clean_names[, order := 1:.N]
+  ATE <- effect_table[effect=='ATE', mean]
+  effect_table[, percent_mean := (mean / ATE)*100]
+  effect_table[, p := '']
+  effect_table[pvalue<0.05, p := paste0(p,'*')]
+  effect_table[pvalue<0.01, p := paste0(p,'*')]
+  effect_table[pvalue<0.001, p := paste0(p,'*')]
+  effect_table[, ci := paste0('(',round(lower,2),', ',round(upper,2),')')]
+  if(o!='g3_fam_wealth_weq')effect_table[, mean := paste0(round(mean,2),p)]
+  if(o=='g3_fam_wealth_weq') {
+    effect_table[, ci := paste0('(',round(lower),', ',round(upper),')')]
+    effect_table[, mean := paste0(round(mean),p)]
+  }
+  effect_table[, percent_mean := round(percent_mean)]
+  effect_table <- merge(effect_table, clean_names, by='effect')
+  effect_table <- effect_table[order(order)]
+  effect_table <- effect_table[, c('effect_clean','mean','ci','percent_mean')]
+  effect_table[, mean := paste0(mean, ci)]
+  effect_table[, ci := NULL]
+  ft <- flextable(effect_table, theme_fun = theme_booktabs) %>%
+    hline_top(part = 'body', border = fp_border(color='black',width=2)) %>%
+    hline_top(part = 'header', border = fp_border(color='black',width=2)) %>%
+    add_footer_lines(c('* p < 0.05; ** p < 0.01; *** p < 0.001')) %>%
+    font(fontname = 'Times New Roman', part='all') %>%
+    fontsize(size = 12, part='all')
+  doc <- read_docx() %>%
+    body_add_flextable(value = ft, split = TRUE) %>%
+    body_end_section_landscape() %>% # a landscape section is ending here
+    print(target = paste0(results_dir,'/',m,'_Table2_',o,'_',Sys.Date(),'.docx'))
+  
+}
+
+## Make sequential mediation plot
+mediators <- c('HOLC D grade','Urban renewal','School ICE','Housing value (log)','Life expectancy')
+get_med <- function(i) {
+  t <- readRDS(paste0(results_dir,'/',i,'_effects.RDS'))
+  t[, seq := i]
+  t[, outcome := mediators[i+1]]
+  return(t)
+}
+effect_table <- rbindlist(lapply(1:(length(mediators)-1), get_med))
+effect_table[effect=='ATE', ATE := mean]
+effect_table[, ATE := max(ATE,na.rm=T), by='outcome']
+effect_table[, percent_mean := (mean / ATE)*100]
+for(e in c('ATE','CDE','PAI','PNIE')) effect_table[grepl(e,effect), effect_type := e]
+effect_table[effect_type=='PNIE', effect_type := 'PIE']
+effect_table[, effect_type := factor(effect_type, levels=c('CDE','PIE','PAI'))]
+effect_table <- merge(effect_table, clean_names, by='effect', all.x=T)
+effect_table[, effect_clean := factor(effect_clean, levels=clean_names[,unique(rev(effect_clean))])]
+ATE <- effect_table[effect=='ATE',mean]
+effect_table[, effect_clean := gsub(' [(]PIE[)]| [(]PAI[)]','',effect_clean)]
+effect_table[, effect_clean := factor(effect_clean, levels=rev(unique(clean_names[,gsub(' [(]PIE[)]| [(]PAI[)]','',unique((effect_clean)))])))]
+effect_table[, outcome := factor(outcome, levels=unique(effect_table[,outcome]))]
+
+## FIGURE 2
+gg <- ggplot(data=effect_table[effect_type!='ATE' & !is.na(effect_clean) & seq!=5,]) + 
+  geom_hline(yintercept=0,color='black') +
+  geom_linerange(aes(x=effect_clean,
+                     ymin=lower,
+                     ymax=upper,
+                     color=effect_type,
+                     group=effect_type),
+                 size=1, color='black', position=position_dodge(width=.8)) +
+  geom_point(aes(x=effect_clean,
+                 y=mean,
+                 fill=effect_type,
+                 group=effect_type),
+             shape=21,
+             size=5, stroke=1.5, position=position_dodge(width=.8)) +
+  labs(y=paste0('Decomposed effect estimate'),x='',fill=NULL) +
+  guides(color='none') + 
+  coord_flip() +
+  scale_fill_viridis_d(labels=c('CDE'='Controlled direct effect (CDE)','PIE'='Pure indirect effect (PIE)','PAI'='Proportion attributable to interaction (PAI)')) + 
+  facet_wrap(~paste0('Mediation ',seq),ncol=1) +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 12),
+        axis.title.y = element_text(size = 12, margin = margin(r=10)),
+        axis.title.x = element_text(size = 12, margin = margin(t=10)),
+        axis.text = element_text(size = 12),
+        legend.title = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.position = 'bottom',
+        #strip.background = element_blank(),
+        strip.placement = "outside",
+        strip.text = element_text(size=12))
+if(seq_med_type=='sequential_update_outcome') {
+  gg <- gg + 
+    #facet_wrap(~outcome,ncol=1,scales='free')
+    facet_wrap(~outcome, scales = "free", ncol = 1, 
+               strip.position = "top",
+               labeller = as_labeller(c('Urban renewal'='Panel 1: Urban renewal projects (total)',
+                                        'School ICE'='Panel 2: School ICE (-1 to 1)',
+                                        'Housing value (log)'='Panel 3: Housing value (log)',
+                                        'Life expectancy'='Panel 4: Period life expectancy (years)'))) + 
+    labs(y='Effect estimate')
+}
+print(gg)
+ggsave(paste0(results_dir,'/sequential_mediation_',Sys.Date(),'.png'),height=12,width=10, units='in')
+ggsave(paste0(results_dir,'/sequential_mediation_',Sys.Date(),'.pdf'),height=12,width=10)
+write.csv(effect_table[effect_type!='ATE' & !is.na(effect_clean) & seq!=5, c('mean','lower','upper','effect_type','outcome')], paste0(results_dir, '/Figure_4_data.csv'), row.names = F)
+
+## TABLE 2
+mediators <- c('HOLC D grade','Urban renewal','School ICE','Housing value (log)','Life expectancy')
+get_med <- function(i) {
+  t <- readRDS(paste0(results_dir,'/',i,'_effects.RDS'))
+  t[, seq := i]
+  t[, outcome := mediators[i+1]]
+  return(t)
+}
+effect_table <- rbindlist(lapply(1:(length(mediators)-1), get_med))
+effect_table[effect=='ATE', ATE := mean]
+effect_table[, ATE := max(ATE,na.rm=T), by='outcome']
+effect_table[, percent_mean := (mean / ATE)*100]
+for(e in c('ATE','CDE','PAI','PNIE')) effect_table[grepl(e,effect), effect_type := e]
+effect_table[effect_type=='PNIE', effect_type := 'PIE']
+effect_table[, effect_type := factor(effect_type, levels=c('CDE','PIE','PAI'))]
+effect_table <- merge(effect_table, clean_names, by='effect', all.x=T)
+effect_table[, effect_clean := factor(effect_clean, levels=clean_names[,unique(rev(effect_clean))])]
+effects <- copy(effect_table[effect_type!='ATE' & !is.na(effect_clean),])
+effects[, p := '']
+effects[pvalue<0.05, p := paste0(p,'*')]
+effects[pvalue<0.01, p := paste0(p,'*')]
+effects[pvalue<0.001, p := paste0(p,'*')]
+effects[, ci := paste0('(',round(lower,1),', ',round(upper,1),')',p)]
+effects[, mean := round(mean,1)]
+effects[, percent_mean := round(percent_mean)]
+effects <- effects[, c('effect_clean','mean','ci','percent_mean','outcome')]
+effects <- dcast(effects, effect_clean ~ outcome, value.var = c('mean','ci','percent_mean'))
+t <- expand.grid(c('mean_','ci_','percent_mean_'), mediators[mediators!=mediators[1]])
+setcolorder(effects, c('effect_clean',paste0(t$Var1,t$Var2)))
+clean_names[, cov_sort := 1:.N]
+effects <- merge(effects, clean_names[, c('effect_clean','cov_sort')])
+effects <- effects[order(cov_sort)]
+effects[, cov_sort := NULL]
+first_header <- as.list(c('',rep(c('Mean','CI','%'),length(mediators)-1)))
+second_header <- as.list(c('',rep(mediators[1],3),rep(mediators[2],3),rep(mediators[3],3),rep(mediators[3],3)))
+names(first_header) <- names(effects)
+names(second_header) <- names(effects)
+ft <- flextable(effects, theme_fun = theme_booktabs) %>%
+  delete_part(part = "header") %>%
+  add_header(values=first_header) %>%
+  add_header(values=second_header) %>%
+  merge_h(part = "header") %>%
+  hline_top(part = 'body', border = fp_border(color='black',width=2)) %>%
+  hline_top(part = 'header', border = fp_border(color='black',width=2)) %>%
+  add_footer_lines(c('* p < 0.05; ** p < 0.01; *** p < 0.001')) %>%
+  font(fontname = 'Times New Roman', part='all') %>%
+  fontsize(size = 8, part='all')
+doc <- read_docx() %>%
+  body_add_flextable(value = ft, split = TRUE) %>%
+  body_end_section_landscape() %>% # a landscape section is ending here
+  print(target = paste0(in_dir,'/tables/Table2_',Sys.Date(),'.docx'))

@@ -1,0 +1,26 @@
+{
+    "id": "05C8BE54",
+    "path": "C:/Users/ngraetz/Dropbox/Penn/repos/public/config/_default/menus.toml",
+    "project_path": "config/_default/menus.toml",
+    "type": "toml",
+    "hash": "3343111868",
+    "contents": "",
+    "dirty": false,
+    "created": 1643074944426.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "16,45",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1643076105,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1643076105017,
+    "read_only": false,
+    "read_only_alternatives": []
+}
