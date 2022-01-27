@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Nick Graetz</title>
+    <link>https://ngraetz.github.io/page/post/</link>
+      <atom:link href="https://ngraetz.github.io/page/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ngraetz.github.io/page/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Posts</title>
+      <link>https://ngraetz.github.io/page/post/</link>
+    </image>
+    
+    <item>
+      <title>Historical redlining and contemporary racial disparities in neighborhood life expectancy</title>
+      <link>https://ngraetz.github.io/page/post/redlining_mortality/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://ngraetz.github.io/page/post/redlining_mortality/</guid>
+      <description>&lt;p&gt;Graetz, N. &amp;amp; Esposito, M. (2022). &lt;em&gt;&lt;strong&gt;Revise and Resubmit&lt;/strong&gt;&lt;/em&gt;. Working paper: &lt;a href=&#34;https://osf.io/preprints/socarxiv/q9gbx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://osf.io/preprints/socarxiv/q9gbx/&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>American Eco-Apartheid: Mapping racial disparities in longevity driven by political economy, state violence, and environmental exposure</title>
+      <link>https://ngraetz.github.io/page/post/eco_apartheid/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://ngraetz.github.io/page/post/eco_apartheid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Historical mechanisms connecting home values over three generations to contemporary Black-white disparities in wealth</title>
+      <link>https://ngraetz.github.io/page/post/home_values/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://ngraetz.github.io/page/post/home_values/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rent-seeking, eviction, and the production of premature death</title>
+      <link>https://ngraetz.github.io/page/post/eviction_mortality/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://ngraetz.github.io/page/post/eviction_mortality/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
