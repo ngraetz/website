@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://ngraetz.github.io/page/sitemap.xml

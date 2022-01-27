@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Nick Graetz</title>
+    <link>/publication/</link>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>/publication/</link>
+    </image>
+    
+    <item>
+      <title>Small-area analyses using public American Community Survey data: A tree-based spatial microsimulation technique</title>
+      <link>/publication/ssrn2020/</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/ssrn2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decomposing county-level working-age mortality trends in the United States between 1999–2001 and 2015–2017</title>
+      <link>/publication/spatdem2021/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/spatdem2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ecological factors associated with suicide mortality among non-Hispanic whites</title>
+      <link>/publication/bmc2021/</link>
+      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/bmc2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mapping disparities in education across low- and middle-income countries</title>
+      <link>/publication/nature2020/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/nature2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mapping local variation in educational attainment across Africa</title>
+      <link>/publication/nature2018/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/nature2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Morgan Peele | Nick Graetz</title>
+    <link>/author/morgan-peele/</link>
+      <atom:link href="/author/morgan-peele/index.xml" rel="self" type="application/rss+xml" />
+    <description>Morgan Peele</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Morgan Peele</title>
+      <link>/author/morgan-peele/</link>
+    </image>
+    
+    <item>
+      <title>Ecological factors associated with suicide mortality among non-Hispanic whites</title>
+      <link>/publication/bmc2021/</link>
+      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/bmc2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
