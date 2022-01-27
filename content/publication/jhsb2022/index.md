@@ -4,7 +4,7 @@ authors:
 - admin
 - Courtney Boen
 - Michael Esposito
-date: "2022-02-09T00:00:00Z test"
+date: "2021-01-10T00:00:00Z test"
 doi: ""
 featured: false
 image:
@@ -15,7 +15,7 @@ publication: '*Journal of Health and Social Behavior*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2022-02-09T00:00:00Z"
+publishDate: "2021-01-10T00:00:00Z"
 summary: _Published in the **Journal of Health and Social Behavior**._ 
 tags:
 title: 'Structural racism and quantitative causal inference: A life course mediation framework for decomposing racial health disparities'
