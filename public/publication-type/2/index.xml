@@ -5,12 +5,20 @@
     <link>/publication-type/2/</link>
       <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
       <link>/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>Structural racism and quantitative causal inference: A life course mediation framework for decomposing racial health disparities</title>
+      <link>/publication/jhsb2022/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/jhsb2022/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Small-area analyses using public American Community Survey data: A tree-based spatial microsimulation technique</title>
@@ -25,14 +33,6 @@
       <link>/publication/spatdem2021/</link>
       <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
       <guid>/publication/spatdem2021/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Structural racism and quantitative causal inference: A life course mediation framework for decomposing racial health disparities</title>
-      <link>/publication/jhsb2022/</link>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>/publication/jhsb2022/</guid>
       <description></description>
     </item>
     
