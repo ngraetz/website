@@ -31,6 +31,8 @@ organizations:
   url: https://evictionlab.org/
 - name: climate + community project
   url: https://www.climateandcommunity.org/
+- name: Socio-Spatial Climate Collaborative
+  url: https://sc2.berkeley.edu/wccm/
 role: Postdoctoral Research Associate, Princeton University
 social:
 - icon: envelope
