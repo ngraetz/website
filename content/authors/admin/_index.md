@@ -61,6 +61,6 @@ I'm also working on a set of simulation and data fusion methods for creating rob
 
 At Princeton’s Eviction Lab, I'm working on several projects related to the rental housing market, displacement, social programs, and health outcomes. Many of these projects are in close collaboration with the Census Bureau, where we are linking individual eviction records to restricted-use data on welfare enrollment, employment, and mortality. This work situates racialized housing inequality as a fundamental cause of population health disparities, focusing on profiteering, exploitation, and power relations between specific actors (e.g., landlords and tenants). 
 
-My academic work in these areas is published or forthcoming in the _Journal of Health and Social Behavior_, _Nature_, _Spatial Demography_, _Sociological Methodology_, the _Russell Sage Foundation Journal of the Social Sciences_, the _New England Journal of Medicine_, and elsewhere.
+My academic work in these areas is published or forthcoming in the _Journal of Health and Social Behavior_, _Social Forces_, _Nature_, _Spatial Demography_, _Sociological Methodology_, the _Russell Sage Foundation Journal of the Social Sciences_, the _New England Journal of Medicine_, and elsewhere.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz_CV_April2022.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz_CV_September2022.pdf" "newtab" >}}CV{{< /staticref >}}.
