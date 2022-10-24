@@ -7,7 +7,7 @@
     <description>Nick Graetz</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Nick Graetz</title>
       <link>/</link>
     </image>
@@ -75,6 +75,22 @@
     </item>
     
     <item>
+      <title>Historical redlining and contemporary racial disparities in neighborhood life expectancy</title>
+      <link>/publication/sf2022/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>/publication/sf2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The impacts of rent burden and eviction on all-cause mortality in the United States</title>
+      <link>/post/eviction_mortality/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>/post/eviction_mortality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Structural racism and quantitative causal inference: A life course mediation framework for decomposing racial health disparities</title>
       <link>/publication/jhsb2022/</link>
       <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
@@ -120,15 +136,6 @@
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       <guid>/publication/bmc2021/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Historical redlining and contemporary racial disparities in neighborhood life expectancy</title>
-      <link>/post/redlining_mortality/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/post/redlining_mortality/</guid>
-      <description>&lt;p&gt;Graetz, N. &amp;amp; Esposito, M. (2022). &lt;em&gt;&lt;strong&gt;Revise and Resubmit&lt;/strong&gt;&lt;/em&gt;. Working paper: &lt;a href=&#34;https://osf.io/preprints/socarxiv/q9gbx/&#34;&gt;https://osf.io/preprints/socarxiv/q9gbx/&lt;/a&gt;.&lt;/p&gt;
-</description>
     </item>
     
     <item>
@@ -190,15 +197,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+&lt;span class=&#34;fragment &#34; &gt;
+   One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+   **Two** 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
+   Three 
+&lt;/span&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
@@ -337,14 +344,6 @@ Three
       <link>/post/home_values/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/post/home_values/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rent-seeking, eviction, and the production of premature death</title>
-      <link>/post/eviction_mortality/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/post/eviction_mortality/</guid>
       <description></description>
     </item>
     

@@ -1,248 +1,150 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication-type/2/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/authors/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/courtney-boen/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/sf2022/</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/author/michael-esposito/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/author/nick-graetz/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/publication_types/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/publication/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/jhsb2022/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/daniel-aldana-cohen/</loc>
-    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/kevin-ummel/</loc>
-    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/ssrn2020/</loc>
-    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/demres2022/</loc>
-    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/et-al/</loc>
-    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/spatdem2021/</loc>
-    <lastmod>2021-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/irma-elo/</loc>
-    <lastmod>2021-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/rsf2020/</loc>
-    <lastmod>2021-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/lisa-keister/</loc>
-    <lastmod>2021-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/bmc2021/</loc>
-    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/morgan-peele/</loc>
-    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/samuel-preston/</loc>
-    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/redlining_mortality/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/post/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/nature2020/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/nature2018/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/ccp1/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/ccp/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/saval/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/data-for-progress/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/other/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/dfp1/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/dfp3/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/dfp2/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/dfp4/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/eco_apartheid/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/home_values/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/eviction_mortality/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/author/courtney-boen/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/jhsb2022/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/daniel-aldana-cohen/</loc>
+    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/kevin-ummel/</loc>
+    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/ssrn2020/</loc>
+    <lastmod>2022-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/demres2022/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/et-al/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/spatdem2021/</loc>
+    <lastmod>2021-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/irma-elo/</loc>
+    <lastmod>2021-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/rsf2020/</loc>
+    <lastmod>2021-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/lisa-keister/</loc>
+    <lastmod>2021-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/bmc2021/</loc>
+    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/morgan-peele/</loc>
+    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/samuel-preston/</loc>
+    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/nature2020/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/nature2018/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/ccp1/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/ccp/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/saval/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/data-for-progress/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/other/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/dfp1/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/dfp3/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/dfp2/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/dfp4/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/eco_apartheid/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/home_values/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
-  
 </urlset>

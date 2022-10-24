@@ -5,20 +5,19 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
     
     <item>
-      <title>Historical redlining and contemporary racial disparities in neighborhood life expectancy</title>
-      <link>/post/redlining_mortality/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>/post/redlining_mortality/</guid>
-      <description>&lt;p&gt;Graetz, N. &amp;amp; Esposito, M. (2022). &lt;em&gt;&lt;strong&gt;Revise and Resubmit&lt;/strong&gt;&lt;/em&gt;. Working paper: &lt;a href=&#34;https://osf.io/preprints/socarxiv/q9gbx/&#34;&gt;https://osf.io/preprints/socarxiv/q9gbx/&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <title>The impacts of rent burden and eviction on all-cause mortality in the United States</title>
+      <link>/post/eviction_mortality/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>/post/eviction_mortality/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -34,14 +33,6 @@
       <link>/post/home_values/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/post/home_values/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rent-seeking, eviction, and the production of premature death</title>
-      <link>/post/eviction_mortality/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/post/eviction_mortality/</guid>
       <description></description>
     </item>
     
