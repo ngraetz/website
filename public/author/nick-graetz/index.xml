@@ -7,7 +7,7 @@
     <description>Nick Graetz</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Nick Graetz</title>
       <link>/author/nick-graetz/</link>
     </image>
@@ -25,6 +25,14 @@
       <link>/post/eviction_mortality/</link>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       <guid>/post/eviction_mortality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A comprehensive demographic profile of the US evicted population</title>
+      <link>/post/eviction_demographics/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>/post/eviction_demographics/</guid>
       <description></description>
     </item>
     
@@ -105,6 +113,14 @@
       <link>/post/home_values/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/post/home_values/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The scars of legal violence: Immigration enforcement, policy, and population health inequality</title>
+      <link>/post/scars/</link>
+      <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>/post/scars/</guid>
       <description></description>
     </item>
     

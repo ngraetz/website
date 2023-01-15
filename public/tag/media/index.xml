@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>media | Nick Graetz</title>
+    <link>/tag/media/</link>
+      <atom:link href="/tag/media/index.xml" rel="self" type="application/rss+xml" />
+    <description>media</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>media</title>
+      <link>/tag/media/</link>
+    </image>
+    
+    <item>
+      <title>Forced to move out of her home, a mother and her special-needs son struggle to find options</title>
+      <link>/project/grio2022/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/grio2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rents are starting to come down, but the trend may not hold</title>
+      <link>/project/ap2022/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/ap2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rising Rents and High Mortgage Rates - Housing Costs Squeeze Budgets to the Brink</title>
+      <link>/project/cnet2022/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/cnet2022/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

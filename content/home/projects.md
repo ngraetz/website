@@ -32,6 +32,10 @@ subtitle = ""
   [[content.filter_button]]
     name = "climate + community project"
     tag = "ccp"
+    
+  [[content.filter_button]]
+    name = "Media Interviews"
+    tag = "media"
   
   [[content.filter_button]]
     name = "Other"
