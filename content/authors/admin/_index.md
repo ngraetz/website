@@ -61,4 +61,4 @@ I'm also working on a set of simulation and data fusion methods for creating rob
 
 My academic work in these areas is published or forthcoming in the _Journal of Health and Social Behavior_, _Social Forces_, _Nature_, _Spatial Demography_, _Sociological Methodology_, the _Russell Sage Foundation Journal of the Social Sciences_, the _New England Journal of Medicine_, and elsewhere.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz_CV_Jan2023.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz_CV.pdf" "newtab" >}}CV{{< /staticref >}}.
