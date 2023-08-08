@@ -29,7 +29,7 @@ interests:
 organizations:
 - name: Eviction Lab
   url: https://evictionlab.org/
-- name: climate + community project
+- name: Climate and Community Project
   url: https://www.climateandcommunity.org/
 - name: Socio-Spatial Climate Collaborative
   url: https://sc2.berkeley.edu/wccm/
