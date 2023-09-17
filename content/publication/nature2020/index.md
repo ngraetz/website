@@ -20,7 +20,7 @@ tags:
 title: Mapping disparities in education across low- and middle-income countries
 url_code: ""
 url_dataset: ""
-url_pdf: media/nature2020.pdf
+url_pdf: "media/Graetz 2020 Nature.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

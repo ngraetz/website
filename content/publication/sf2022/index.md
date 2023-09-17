@@ -20,7 +20,7 @@ tags:
 title: 'Historical redlining and contemporary racial disparities in neighborhood life expectancy'
 url_code: ""
 url_dataset: ""
-url_pdf: ""
+url_pdf: "media/Graetz 2023 Social Forces.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

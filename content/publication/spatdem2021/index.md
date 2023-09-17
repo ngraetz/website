@@ -20,7 +20,7 @@ tags:
 title: 'Decomposing county-level working-age mortality trends in the United States between 1999–2001 and 2015–2017'
 url_code: ""
 url_dataset: ""
-url_pdf: https://link.springer.com/article/10.1007/s40980-021-00095-6
+url_pdf: "media/Graetz 2021 Spat Dem.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

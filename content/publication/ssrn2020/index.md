@@ -21,7 +21,7 @@ tags:
 title: 'Small-area analyses using public American Community Survey data: A tree-based spatial microsimulation technique'
 url_code: ""
 url_dataset: ""
-url_pdf: https://journals.sagepub.com/doi/full/10.1177/00811750211057572
+url_pdf: "media/Graetz 2022 Soc Method.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""
