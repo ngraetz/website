@@ -34,12 +34,57 @@
   
   <url>
     <loc>/publication-type/2/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/pnas2023/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/carl-gershenson/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/danielle-sandler/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/matthew-desmond/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/nick-graetz/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/peter-hepburn/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/sonya-porter/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,32 +98,12 @@
   </url>
   
   <url>
-    <loc>/author/nick-graetz/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/eviction_mortality/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/eviction_demographics/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
   </url>
   

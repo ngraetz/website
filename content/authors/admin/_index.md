@@ -59,4 +59,4 @@ My primary research focus has been revealing the mechanisms through which the ho
 
 I’m also an active member of the Climate and Community Project, a progressive climate policy think tank developing research on the climate and inequality nexus. This work includes collaborations with housing and labor organizers, policymakers, and federal agencies. I’m interested in communicating sociological perspectives to external audiences and building coalitions across academics, policymakers, journalists, and the public.
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz_CV_Aug2023.pdf" "newtab" >}}CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/Graetz CV.pdf" "newtab" >}}CV{{< /staticref >}}.
