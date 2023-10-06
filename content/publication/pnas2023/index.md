@@ -19,7 +19,7 @@ publication_short: ""
 publication_types:
 - "2"
 publishDate: "2023-09-10T00:00:00Z"
-summary: _Published in the **PNAS**._ 
+summary: _Published in **PNAS**._ 
 tags:
 title: 'A comprehensive demographic profile of the US evicted population'
 url_code: ""

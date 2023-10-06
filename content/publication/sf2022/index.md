@@ -15,7 +15,7 @@ publication_short: ""
 publication_types:
 - "2"
 publishDate: "2022-10-10T00:00:00Z"
-summary: _Forthcoming in **Social Forces**._ 
+summary: _Published in **Social Forces**._ 
 tags:
 title: 'Historical redlining and contemporary racial disparities in neighborhood life expectancy'
 url_code: ""
