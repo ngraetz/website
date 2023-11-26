@@ -22,7 +22,7 @@ tags:
 title: 'Ecological factors associated with suicide mortality among non-Hispanic whites'
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2020 BMC PH.pdf"
+url_pdf: "media/Graetz_2020_BMC_PH.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

@@ -20,7 +20,7 @@ tags:
 title: Mapping local variation in educational attainment across Africa 
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2018 Nature.pdf"
+url_pdf: "media/Graetz_2018_Nature.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

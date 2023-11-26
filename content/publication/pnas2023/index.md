@@ -24,7 +24,7 @@ tags:
 title: 'A comprehensive demographic profile of the US evicted population'
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2023 PNAS.pdf"
+url_pdf: "media/Graetz_2023_PNAS.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

@@ -21,7 +21,7 @@ tags:
 title: 'Structural racism and quantitative causal inference: A life course mediation framework for decomposing racial health disparities'
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2022 JHSB.pdf"
+url_pdf: "media/Graetz_2022_JHSB.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

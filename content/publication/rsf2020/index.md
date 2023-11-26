@@ -21,7 +21,7 @@ tags:
 title: 'Household wealth and child body mass index: Patterns and mechanisms'
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2021 RSF.pdf"
+url_pdf: "media/Graetz_2021_RSF.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""

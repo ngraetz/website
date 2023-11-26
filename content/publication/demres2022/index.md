@@ -21,7 +21,7 @@ tags:
 title: 'Early life patterns of criminal legal system involvement: Inequalities by race/ethnicity, gender, and parental education'
 url_code: ""
 url_dataset: ""
-url_pdf: "media/Graetz 2022 Dem Research.pdf"
+url_pdf: "media/Graetz_2022_Dem_Research.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""
