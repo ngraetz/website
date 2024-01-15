@@ -33,4 +33,6 @@ url_video: ""
 links:
 - name: New York Times
   url: https://www.nytimes.com/2023/10/02/upshot/evictions-children-american-renters.html
+- name: Blog
+  url: https://evictionlab.org/who-is-evicted-in-america/
 ---

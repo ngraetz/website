@@ -26,4 +26,7 @@ url_project: ""
 url_slides: ""
 url_source: ""
 url_video: ""
+links:
+- name: Blog
+  url: https://www.climateandcommunity.org/redlining-and-environmental-risk
 ---

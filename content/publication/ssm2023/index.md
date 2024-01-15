@@ -32,4 +32,8 @@ url_video: ""
 links:
 - name: USA Today
   url: https://www.usatoday.com/story/news/health/2024/01/10/high-rent-bad-health-short-lifespan/71891093007/
+- name: CNBC
+  url: https://www.cnbc.com/2023/12/19/unaffordable-rents-linked-to-premature-death.html
+- name: Blog
+  url: https://evictionlab.org/rising-rents-and-evictions-linked-to-premature-death/ 
 ---
