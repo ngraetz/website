@@ -5,12 +5,44 @@
     <link>/project/</link>
       <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
+    
+    <item>
+      <title>Hidden landlords: renters’ woes soar as property owners hide their identities</title>
+      <link>/project/guardian2023/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/project/guardian2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study: Young children are most at risk of evictions in US</title>
+      <link>/project/njpbs2023/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/project/njpbs2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Americans Most Threatened by Eviction: Young Children</title>
+      <link>/project/nyt2023/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/project/nyt2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unaffordable rents are linked to premature death, Princeton study finds</title>
+      <link>/project/cnbc2023/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/project/cnbc2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Green New Deal for Public Housing to Deliver Racial, Economic, and Climate Justice</title>
