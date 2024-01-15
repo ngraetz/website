@@ -5,6 +5,6 @@ image:
   focal_point: Smart
 summary: Report for DfP on a Green New Deal for NYCHA communities.
 tags:
-- Data for Progress
+- ccp
 title: 'Report: A Green New Deal for NYCHA Communities'
 ---

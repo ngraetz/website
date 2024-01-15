@@ -5,6 +5,6 @@ image:
   focal_point: Smart
 summary: National report for DfP on GND for public housing with interactive maps.
 tags:
-- Data for Progress
+- ccp
 title: 'Report: A Green New Deal for American Public Housing Communities'
 ---

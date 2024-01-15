@@ -5,6 +5,6 @@ image:
   focal_point: Smart
 summary: National report for DfP on GND for suburban transportation.
 tags:
-- Data for Progress
+- ccp
 title: 'Report: A Green New Deal for Suburban Transportation'
 ---

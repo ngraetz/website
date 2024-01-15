@@ -5,6 +5,6 @@ image:
   focal_point: Smart
 summary: 
 tags:
-- Data for Progress
+- ccp
 title: 'Report: Public Housing at risk: Adaptation through a Green New Deal'
 ---
