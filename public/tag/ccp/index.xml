@@ -5,7 +5,7 @@
     <link>/tag/ccp/</link>
       <atom:link href="/tag/ccp/index.xml" rel="self" type="application/rss+xml" />
     <description>ccp</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>ccp</title>
@@ -13,10 +13,50 @@
     </image>
     
     <item>
+      <title>Lessons from the study of redlining and health for green housing investment</title>
+      <link>/project/ccp2/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>/project/ccp2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>A Green New Deal for Public Housing to Deliver Racial, Economic, and Climate Justice</title>
       <link>/project/ccp1/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/project/ccp1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Report: A Green New Deal for American Public Housing Communities</title>
+      <link>/project/dfp1/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dfp1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Report: A Green New Deal for NYCHA Communities</title>
+      <link>/project/dfp3/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dfp3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Report: A Green New Deal for Suburban Transportation</title>
+      <link>/project/dfp2/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dfp2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Report: Public Housing at risk: Adaptation through a Green New Deal</title>
+      <link>/project/dfp4/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/dfp4/</guid>
       <description></description>
     </item>
     

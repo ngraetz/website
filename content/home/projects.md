@@ -24,10 +24,6 @@ subtitle = ""
   [[content.filter_button]]
     name = "All"
     tag = "*"
-  
-  [[content.filter_button]]
-    name = "Data for Progress"
-    tag = "Data for Progress"
 
   [[content.filter_button]]
     name = "climate + community project"

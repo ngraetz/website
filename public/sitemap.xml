@@ -34,36 +34,56 @@
   
   <url>
     <loc>/publication-type/2/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/pnas2023/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/author/carl-gershenson/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/author/danielle-sandler/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/author/matthew-desmond/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/author/nick-graetz/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/sonya-porter/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/ssm2023/</loc>
+    <lastmod>2023-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/pnas2023/</loc>
     <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,27 +93,17 @@
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/sonya-porter/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/ssm2023/</loc>
-    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <loc>/tag/ccp/</loc>
+    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/project/guardian2023/</loc>
+    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/ccp2/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -248,17 +258,7 @@
   </url>
   
   <url>
-    <loc>/tag/ccp/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/project/saval/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/data-for-progress/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   

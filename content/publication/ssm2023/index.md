@@ -17,7 +17,7 @@ publication: '*Social Science & Medicine*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2023-09-10T00:00:00Z"
+publishDate: "2023-12-10T00:00:00Z"
 summary: _Published in **Social Science & Medicine**._ 
 tags:
 title: 'The impacts of rent burden and eviction on mortality in the United States, 2000–2019'
@@ -29,4 +29,7 @@ url_project: ""
 url_slides: ""
 url_source: ""
 url_video: ""
+links:
+- name: USA Today
+  url: https://www.usatoday.com/story/news/health/2024/01/10/high-rent-bad-health-short-lifespan/71891093007/
 ---
