@@ -18,7 +18,7 @@ publication: '*JAMA*'
 publication_short: "*JAMA*"
 publication_types:
 - "2"
-publishDate: "2020-01-09T00:00:00Z"
+publishDate: "2024-01-09T00:00:00Z"
 summary: _Published in **JAMA**._
 tags:
 title: 'Examining excess mortality associated with the COVID-19 pandemic for renters threatened with eviction'
