@@ -31,6 +31,8 @@ url_slides: ""
 url_source: ""
 url_video: ""
 links:
+- name: PBS NewsHour
+  url: https://www.pbs.org/newshour/show/how-evictions-and-housing-instability-can-have-deadly-consequences
 - name: CNN
   url: https://edition.cnn.com/2024/02/20/health/eviction-mortality-risk-covid/index.html
 - name: Blog
