@@ -35,6 +35,8 @@ links:
   url: https://www.pbs.org/newshour/show/how-evictions-and-housing-instability-can-have-deadly-consequences
 - name: CNN
   url: https://edition.cnn.com/2024/02/20/health/eviction-mortality-risk-covid/index.html
+- name: JAMA Podcast
+  url: https://edhub.ama-assn.org/jn-learning/audio-player/18855920
 - name: Blog
   url: https://evictionlab.org/eviction-was-a-deadly-risk-during-the-covid-19-pandemic/
 ---
