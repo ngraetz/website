@@ -14,7 +14,7 @@ education:
   - course: B.S., Psychology and Political Science
     institution: University of Wisconsin-Madison
     year: 2013
-email: ""
+email: "ngraetz@umn.edu"
 highlight_name: false
 interests:
 - Structural racism
@@ -31,13 +31,11 @@ organizations:
   url: https://evictionlab.org/
 - name: Climate and Community Project
   url: https://www.climateandcommunity.org/
-- name: Socio-Spatial Climate Collaborative
-  url: https://sc2.berkeley.edu/wccm/
-role: Postdoctoral Research Associate, Princeton University
+role: Assistant Professor, University of Minnesota
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:ngraetz@princeton.edu
+  link: mailto:ngraetz@umn.edu
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/NickGraetz
@@ -53,7 +51,7 @@ user_groups:
 - Principal Investigators
 ---
 
-I am a Postdoctoral Research Associate at Princeton University where I lead a collaboration between Princeton’s Eviction Lab and the U.S. Census Bureau. In Fall 2024, I will join the Department of Sociology at the University of Minnesota as an Assistant Professor. I work at the intersection of population health, urban sociology, and political economy.
+I am an Assistant Professor at the University of Minnesota in the Department of Sociology and the Institute for Social Research and Data Innovation. I work at the intersection of population health, urban sociology, and political economy.
 
 My primary research focus has been revealing the mechanisms through which the housing market entrenches racial inequalities in health. While it’s well known that structural inequalities shape population health, I’ve developed new data and tools to isolate and quantify specifically how factors like redlining, eviction, and housing costs create cumulative disadvantage—and the ways in which different actors profit from these arrangements. Throughout all my work, I use relational sociology to inform analyses of place, race, and class, aligning cutting-edge quantitative methods with careful attention to historical scholarship and causal inference debates. My academic work in these areas is published or forthcoming in _Social Forces_, the _Journal of Health and Social Behavior_, the _Proceedings of the National Academy of Sciences_, _Nature_, the _Journal of the American Medical Association_, _Social Science & Medicine_, the _New England Journal of Medicine_, _The Lancet_, and elsewhere.
 
