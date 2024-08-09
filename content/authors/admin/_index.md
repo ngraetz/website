@@ -5,9 +5,6 @@ education:
   - course: Ph.D., Demography and Sociology
     institution: University of Pennsylvania 
     year: 2021
-  - course: M.A., Demography
-    institution: University of Pennsylvania
-    year: 2018
   - course: M.P.H., Health Metrics and Evaluation
     institution: University of Washington
     year: 2016
@@ -17,18 +14,15 @@ education:
 email: "ngraetz@umn.edu"
 highlight_name: false
 interests:
-- Structural racism
-- Housing policy
-- Causal mediation analysis
-- Population health
-- Political economy
-- Stratification
-- Life-course modeling
-- Bayesian small area estimation
-- Data visualization
+- Social Demography
+- Housing
+- Population Health
+- Structural Racism
+- Climate Change
+- Political Economy
+- Environmental Sociology
+- Social Policy
 organizations:
-- name: Eviction Lab
-  url: https://evictionlab.org/
 - name: Climate and Community Project
   url: https://www.climateandcommunity.org/
 role: Assistant Professor, University of Minnesota
