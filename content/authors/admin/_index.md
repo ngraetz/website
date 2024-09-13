@@ -23,9 +23,13 @@ interests:
 - Environmental Sociology
 - Social Policy
 organizations:
-- name: Climate and Community Project
+- name: University of Minnesota
+  url: https://cla.umn.edu/about/directory/profile/ngraetz
+- name: Climate and Community Institute (CCI)
   url: https://www.climateandcommunity.org/
-role: Assistant Professor, University of Minnesota
+- name: Health and Power Organizing Project (HPOP)
+  url: https://uwphi.pophealth.wisc.edu/public-health-tools-and-resources/health-and-power-organizing-project-hpop/
+role: Assistant Professor
 social:
 - icon: envelope
   icon_pack: fas
