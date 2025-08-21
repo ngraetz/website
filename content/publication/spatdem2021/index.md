@@ -3,7 +3,7 @@ abstract: Studies have documented significant geographic divergence in U.S. mort
 authors:
 - admin
 - Irma Elo
-date: "2021-06-09T00:00:00Z test"
+date: "2021-06-09"
 doi: ""
 featured: false
 image:
@@ -14,7 +14,7 @@ publication: '*Spatial Demography*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2021-06-09T00:00:00Z"
+publishDate: "2021-06-09"
 summary: _Published in **Spatial Demography**._ 
 tags:
 title: 'Decomposing county-level working-age mortality trends in the United States between 1999–2001 and 2015–2017'

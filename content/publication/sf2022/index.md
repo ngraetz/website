@@ -3,7 +3,7 @@ abstract: While evidence suggests a durable relationship between redlining and p
 authors:
 - admin
 - Michael Esposito
-date: "2022-10-10T00:00:00Z test"
+date: "2022-10-10"
 doi: ""
 featured: false
 image:
@@ -14,7 +14,7 @@ publication: '*Social Forces*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2022-10-10T00:00:00Z"
+publishDate: "2022-10-10"
 summary: _Published in **Social Forces**._ 
 tags:
 title: 'Historical redlining and contemporary racial disparities in neighborhood life expectancy'

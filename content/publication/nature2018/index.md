@@ -3,7 +3,7 @@ abstract: Educational attainment for women of reproductive age is linked to redu
 authors:
 - admin
 - et al
-date: "2018-03-01T00:00:00Z test"
+date: "2018-03-01"
 doi: ""
 featured: false
 image:
@@ -14,7 +14,7 @@ publication: '*Nature*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2018-03-01T00:00:00Z"
+publishDate: "2018-03-01"
 summary: _Published in **Nature**._ 
 tags:
 title: Mapping local variation in educational attainment across Africa 

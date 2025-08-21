@@ -5,7 +5,7 @@ authors:
 - Samuel Preston
 - Morgan Peele
 - Irma Elo
-date: "2021-01-09T00:00:00Z test"
+date: "2021-01-09"
 doi: ""
 featured: false
 image:
@@ -16,7 +16,7 @@ publication: '*BMC Public Health*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2021-01-09T00:00:00Z"
+publishDate: "2021-01-09"
 summary: _Published in the **BMC Public Health**._ 
 tags:
 title: 'Ecological factors associated with suicide mortality among non-Hispanic whites'

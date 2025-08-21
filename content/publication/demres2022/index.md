@@ -4,7 +4,7 @@ authors:
 - Courtney Boen
 - admin
 - et al
-date: "2022-01-08T00:00:00Z test"
+date: "2022-01-08"
 doi: ""
 featured: false
 image:
@@ -15,7 +15,7 @@ publication: '*Demographic Research*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2022-01-08T00:00:00Z"
+publishDate: "2022-01-08"
 summary: _Published in the **Demographic Research**._ 
 tags:
 title: 'Early life patterns of criminal legal system involvement: Inequalities by race/ethnicity, gender, and parental education'

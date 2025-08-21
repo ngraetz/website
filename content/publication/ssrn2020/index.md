@@ -4,7 +4,7 @@ authors:
 - admin
 - Kevin Ummel
 - Daniel Aldana Cohen
-date: "2022-01-09T00:00:00Z test"
+date: "2022-01-09"
 doi: ""
 featured: false
 image:
@@ -15,7 +15,7 @@ publication: '*Sociological Methodology*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2022-01-09T00:00:00Z"
+publishDate: "2022-01-09"
 summary: _Published in **Sociological Methodology**._ 
 tags:
 title: 'Small-area analyses using public American Community Survey data: A tree-based spatial microsimulation technique'

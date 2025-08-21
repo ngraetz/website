@@ -6,7 +6,7 @@ authors:
 - Sonya Porter
 - Danielle Sandler
 - Matthew Desmond
-date: "2024-12-10T00:00:00Z test"
+date: "2024-12-10"
 doi: ""
 featured: false
 image:
@@ -17,7 +17,7 @@ publication: '*Social Science & Medicine*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2023-12-10T00:00:00Z"
+publishDate: "2023-12-10"
 summary: _Published in **Social Science & Medicine**._ 
 tags:
 title: 'The impacts of rent burden and eviction on mortality in the United States, 2000–2019'

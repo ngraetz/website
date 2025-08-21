@@ -7,7 +7,7 @@ authors:
 - Sonya Porter
 - Danielle Sandler
 - Matthew Desmond
-date: "2023-09-10T00:00:00Z test"
+date: "2023-09-10"
 doi: ""
 featured: false
 image:
@@ -18,7 +18,7 @@ publication: '*PNAS*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2023-09-10T00:00:00Z"
+publishDate: "2023-09-10"
 summary: _Published in **PNAS**._ 
 tags:
 title: 'A comprehensive demographic profile of the US evicted population'

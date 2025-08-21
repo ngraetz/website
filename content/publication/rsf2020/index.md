@@ -4,7 +4,7 @@ authors:
 - Courtney Boen
 - Lisa Keister
 - admin
-date: "2021-05-09T00:00:00Z test"
+date: "2021-05-09"
 doi: ""
 featured: false
 image:
@@ -15,7 +15,7 @@ publication: '*The Russell Sage Foundation Journal of the Social Sciences*'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2021-05-09T00:00:00Z"
+publishDate: "2021-05-09"
 summary: _Published in the **The Russell Sage Foundation Journal of the Social Sciences**._ 
 tags:
 title: 'Household wealth and child body mass index: Patterns and mechanisms'

@@ -3,7 +3,7 @@ abstract: Educational attainment is an important social determinant of maternal,
 authors:
 - admin
 - et al
-date: "2020-01-09T00:00:00Z test"
+date: "2020-01-09"
 doi: ""
 featured: false
 image:
@@ -14,7 +14,7 @@ publication: '*Nature*'
 publication_short: "*Nature*"
 publication_types:
 - "2"
-publishDate: "2020-01-09T00:00:00Z"
+publishDate: "2020-01-09"
 summary: _Published in **Nature**._
 tags:
 title: Mapping disparities in education across low- and middle-income countries
